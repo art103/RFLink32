@@ -74,8 +74,8 @@ namespace RFLink { namespace Radio  {
       #ifndef RFLINK_NO_RADIOLIB_SUPPORT
 
       const int32_t default_frequency = 433920000;
-      const int32_t default_BitRate = 19200;
-      const int32_t default_rxBandwidth = 102000;
+      const int32_t default_BitRate = 9600;
+      const int32_t default_rxBandwidth = 250000;
 
       int32_t frequency;
       int32_t rxBandwidth;
@@ -1224,7 +1224,7 @@ namespace RFLink { namespace Radio  {
 
       auto result = radio_CC1101->begin( (float)params::frequency/1000000,
                                             (float)params::bitrate/1000,
-                                            5.0f,
+                                            50.0F,
                                             (float)params::rxBandwidth/1000,
                                             7, 16);
       Serial.printf_P(PSTR("Initialized CC1101(freq=%.2fMhz,br=%.3fkbps,rxbw=%.1fkhz)=%i\r\n"),
