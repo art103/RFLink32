@@ -205,7 +205,7 @@ boolean PluginTX_018(byte function, const char *string)
     if (!retrieve_Name(PLUGIN_018_ID))  // last try, an order
         return false;
 
-    uint32_t uuid = 0;
+    unsigned long uuid = 0;
     byte node = 0;
     byte cmd = 0;
 
