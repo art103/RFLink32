@@ -69,7 +69,7 @@ boolean Plugin_018(byte function, const char *string)
         {
             int i;
 
-            // Calculate CSUM excluding hedaer
+            // Calculate CSUM excluding header
             for (i=1; i<7; ++i)
                 pkt_crc += packet[i];
 
